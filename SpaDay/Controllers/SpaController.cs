@@ -42,7 +42,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost]
-        [Route("/spa")]
+        [Route("/spa/menu")]
         public IActionResult Menu(string name, string skintype, string manipedi)
         {
             List<string> facials = new List<string>()
@@ -68,6 +68,7 @@ namespace SpaDay.Controllers
             ViewBag.appropriateFacials = appropriateFacials;
             
             return View();
+            // return Redirect("/Menu");  https://education.launchcode.org/csharp-web-development/chapters/razor-views/template-forms.html
         }
 
 
