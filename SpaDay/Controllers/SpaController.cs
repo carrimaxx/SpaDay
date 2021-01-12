@@ -28,14 +28,11 @@ namespace SpaDay.Controllers
                     return false;
                 }
             }
-
             
             return true;
-
         }
 
         [HttpGet]
-
         public IActionResult Index()
         {
             return View();
@@ -67,8 +64,7 @@ namespace SpaDay.Controllers
             ViewBag.manipedi = manipedi;
             ViewBag.appropriateFacials = appropriateFacials;
             
-            return View();
-            // return Redirect("/Menu");  https://education.launchcode.org/csharp-web-development/chapters/razor-views/template-forms.html
+             return View();
         }
 
 
