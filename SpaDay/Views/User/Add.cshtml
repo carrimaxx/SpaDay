@@ -1,0 +1,47 @@
+﻿
+<h1>New Client Signup</h1>
+
+    @if (ViewBag.error != null)
+    {
+        <h5 class="alert alert-warning" role="alert">@ViewBag.error</h5>
+    }
+
+    <form method="post" action="/user" class="table">
+
+        <label>
+            Username:
+            @if (ViewBag.error == null)
+            {
+                <input type="text" name="username" />
+            }
+            else
+            {
+                <input type="text" name="username" value="@ViewBag.username" />
+            }
+        </label>
+        <br />
+        <label>
+            Email:
+            @if (ViewBag.error == null)
+            {
+                <input type="text" name="email" />
+            }
+            else
+            {
+                <input type="text" name="email" value="@ViewBag.email" />
+            }
+        </label>
+        <br />
+        <label>
+            Password:
+            <input type="password" name="password" />
+        </label>
+        <br />
+        <label>
+            Verify password:
+            <input type="password" name="verify" />
+        </label>
+        <br />
+        <input type="submit" value="Sign up" class="btn btn-primary" />
+
+    </form>

@@ -1,0 +1,15 @@
+﻿@*User/Index*@
+
+<h1>Welcome, @ViewBag.user.Username!</h1>
+<br />
+
+<p>
+    <a asp-controller="spa" asp-action="index" type="button" class="btn btn-info">Choose your service today</a> 
+</p>
+<br />
+
+<div>
+    <h4>Account Details:</h4>
+    <p>Your account was created on @ViewBag.user.SignUpDate.</p>
+    <p>Your account email is @ViewBag.user.Email</p>
+</div>
